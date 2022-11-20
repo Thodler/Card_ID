@@ -2,7 +2,7 @@
 
   <div class="card__section">
     <img src="{{ user.avatar }}" alt="Photo de profil" class="card__avatar">
-    <p class="card__birthday">{{ user.date_of_birth }}</p>
+    <p class="card__birthday">{{ user.date_of_birth | date:'dd/MM/y'}}</p>
   </div>
 
   <div class="card__section">
