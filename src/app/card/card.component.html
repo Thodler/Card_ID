@@ -6,6 +6,7 @@
   </div>
 
   <div class="card__section">
+    <app-btn-refresh (refreshUserRandom$)="getUserRandom()"></app-btn-refresh>
     <ul class="card__list">
       <li class="card__item">Nom: <span class="card__detail">{{ user.last_name }}</span></li>
       <li class="card__item">Prénom: <span class="card__detail">{{ user.first_name }}</span></li>

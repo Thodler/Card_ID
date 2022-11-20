@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit} from '@angular/core';
 import {UserService} from "../services/user.service";
 import {User} from "../_models/User";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-card',
@@ -10,6 +11,7 @@ import {User} from "../_models/User";
 export class CardComponent implements OnInit {
 
   user!: User
+  refreshUser$!: Observable<EventEmitter<User>>
 
   constructor(
     private userService: UserService
