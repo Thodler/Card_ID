@@ -22,10 +22,20 @@ export class CardComponent implements OnInit {
   getUserRandom(){
     this.userService.getUser()
       .subscribe({
-        next: user => this.user = user,
+        next: user => {
+          this.user = user
+          this.calculeAge();
+        },
         error: error => console.warn(error),
         complete: ()=>console.log(this.user)
       })
+  }
+
+  calculeAge(): number{
+    const now = new Date();
+    const birth = new Date(this.user.date_of_birth);
+    const time = now.getTime() - birth.getTime()
+    return time / (1000 * 3600 * 24 * 365);
   }
 
 }

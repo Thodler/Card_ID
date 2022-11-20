@@ -9,7 +9,7 @@
     <ul class="card__list">
       <li class="card__item">Nom: <span class="card__detail">{{ user.last_name }}</span></li>
       <li class="card__item">Prénom: <span class="card__detail">{{ user.first_name }}</span></li>
-      <li class="card__item">Age: <span class="card__detail"></span></li>
+      <li class="card__item">Age: <span class="card__detail">{{ calculeAge() | number: '1.0-0' }} ans</span></li>
       <li class="card__item">Adresse: <span class="card__detail"> {{ user.address.street_address }} <br>{{ user.address.zip_code}}, {{ user.address.city }}</span></li>
     </ul>
   </div>
