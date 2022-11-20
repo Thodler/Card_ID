@@ -1,0 +1,21 @@
+.card{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 1rem solid dodgerblue;
+  border-radius: 1rem;
+
+  padding: 1rem;
+
+  &__section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
